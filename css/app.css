@@ -1,0 +1,119 @@
+/* Normalizacion de box*/
+
+html {
+    box-sizing: border-box; /*Border box impide que se sumen las dimensiones del padding al width*/
+    font-size: 62.5%; /*Normalizacion para 1rem = 10px*/
+}
+*, *:before, *::after{
+    box-sizing: inherit;
+} 
+
+/*Globales*/
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+a { 
+    text-decoration: none;
+    color:black
+}
+
+h1 span{
+    color: #037bc0
+}
+
+h2 span {
+    color: green
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header y navs */
+
+
+
+
+
+.nombre-sitio {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contenedor-navegacion {
+    border: 0.1rem solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55rem;
+}
+
+.enlace {
+    color: #037bc0;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.sobre-nosotros {
+ background-color: red;
+ padding: 2.5rem;
+ width: 20rem;   
+}
+
+.sobre-empresa {
+    background-color: blue;
+    padding: 10rem;
+    width: 50rem;
+
+}
+
+/* Categorias */
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+
+.categorias h2 {
+    text-align: center;
+}
+
+.categoria a {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: white;
+    border-bottom-right-radius: 1rem;
+}
