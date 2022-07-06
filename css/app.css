@@ -18,6 +18,16 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+
 a { 
     text-decoration: none;
     color:black
@@ -31,29 +41,46 @@ h2 span {
     color: green
 }
 
-img {
-    max-width: 100%;
-    width: 100%;
-    display: block;
-}
-
 .contenedor {
     max-width: 120rem;
     margin-left: auto;
     margin-right: auto;
 }
 
+img {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+.btn {
+    color: #fff;
+    display: block; /*Toma todo el ancho disponible*/ 
+    background-color: #8cbc00;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+
+.btn:hover {
+    background-color: #5f800f;
+}
+
+
+
+/*Utils*/
+.text-center{
+    text-align: center;
+}
+
+
 /* Header y navs */
-
-
-
-
 
 .nombre-sitio {
     margin-top: 5rem;
     margin-bottom: 5rem;
     text-align: center;
-    font-size: 4rem;
 }
 
 .contenedor-navegacion {
@@ -71,6 +98,7 @@ img {
     background-image: url(../img/principal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     height: 55rem;
 }
 
@@ -79,19 +107,6 @@ img {
     font-weight: bold;
     text-transform: capitalize;
     text-decoration: none;
-}
-
-.sobre-nosotros {
- background-color: red;
- padding: 2.5rem;
- width: 20rem;   
-}
-
-.sobre-empresa {
-    background-color: blue;
-    padding: 10rem;
-    width: 50rem;
-
 }
 
 /* Categorias */
@@ -116,4 +131,154 @@ img {
     background-color: #037bc0;
     color: white;
     border-bottom-right-radius: 1rem;
+}
+
+/* Sobre nosotros*/
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%),
+        url(../img/nosotros.jpg)
+    ;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+    background-position: left center;
+}
+
+/*WITH CSS Grid*/ 
+/* .sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    color: #fff
+}
+
+.texto-nosotros {
+    grid-column: 2/3; 
+} */
+
+
+/*With Flexbox*/
+.sobre-nosotros-grid {
+    display: flex;
+    color: #fff;
+    justify-content: flex-end;
+}
+
+.texto-nosotros {
+    flex-basis: 50%;
+    padding-left: 5%;
+}
+
+
+
+/*Nuestros productos*/
+
+.contenido-principal {
+    padding-top: 1rem;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1%;
+    row-gap: 1%;
+}
+
+.producto:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img,
+.producto:nth-child(4) img,
+.producto:nth-child(5) img,
+.producto:nth-child(6) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    padding: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.texto-producto .precio {
+    font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.texto-producto p {
+    text-align: center;
+    color: #fff;
+}
+
+
+/*Footer*/
+
+.site-footer {
+    margin-top: 5rem;
+    border-top: 1px solid #e1e1e1;
+}
+
+/* .grid-footer {
+    display: flex;
+}
+
+.grid-footer div {
+    flex: 1;
+} */
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.grid-footer div {
+    flex: 1;
+}
+
+.footer-menu a {
+    display: block;
+    line-height: 2;
 }
